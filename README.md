@@ -17,4 +17,5 @@ http://support.apsalar.com/customer/portal/articles/772141-using-javascript-in-a
 	```Apsalar.startSession(this, "<API_KEY>", "<SECRET>");```
 
 1. Change API key in assets/www2/level2.html or assets/www/level2.html
+
 	```"{'ps': '<API KEY>'...```
