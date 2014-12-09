@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8" />
+ <script>
+function b2() {
+     ApsalarInterface.event('_レベル2進むボタン押下', "{param1: '_foo', param2: '_bar'}");
+}
+ </script>
+</head>
+
+<body>
+<h1>レベル1</h1>
+<p style="margin-top:30px">
+<a onclick="b2()" href="./level2.html">
+    レベル2に進む
+</a>
+</p>
+<p>
+    <a onclick="ApsalarInterface.event('Googleへ移動')" href="http://www.google.co.jp/">Googleへ移動</a>
+</p>
+<div id="msg"></div>
+</body>
+<script>
+</script>
+</html>
