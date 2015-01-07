@@ -10,16 +10,19 @@ function _val(id) {
     return _id(id).value;
 }
 function event_revenue(pk, pn, pp, pq, r) {
-    return ApsalarInterface.event('__iap__',
-    "{'ps': '<API KEY>','pcc': 'JPY'"
-    + ",'pk': 'js_" + pk
-    + "','pn': '" + pn
-    + "','pc': '" + 'test category'
-    + "','pp': '" + pp
-    + "','pq': '" + pq
-    + "','r':  '" + r
-    + "'}");
+    var revenuParam = {
+        'ps': '<API_KEY>',  /* API KEY */
+        'pcc': 'JPY',       /* 通貨コード */
+        'pk': pk,           /* 商品コード */
+        'pc': 'カテゴリ名' ,  /* 商品カテゴリ (optional) */
+        'pn': pn,           /* 商品名 */
+        'pp': pp,           /* 単価 */
+        'pq': pq,           /* 個数 */
+        'r':  r             /* 合計金額 */
+    };
+    return ApsalarInterface.event('__iap__', JSON.stringify(revenuParam));
 }
+
 function dobuy() {
     if (!confirm("購入しますか?")) {
         return;

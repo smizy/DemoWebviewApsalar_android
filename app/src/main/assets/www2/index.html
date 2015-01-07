@@ -4,7 +4,11 @@
  <meta charset="UTF-8" />
  <script>
 function b2() {
-     ApsalarInterface.event('_レベル2進むボタン押下', "{param1: '_foo', param2: '_bar'}");
+    var param = {
+      param1: '_foo',
+      param2: '_bar'
+    };
+    ApsalarInterface.event('_レベル2進むボタン押下', JSON.stringify(param));
 }
  </script>
 </head>

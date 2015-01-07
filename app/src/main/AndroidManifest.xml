@@ -24,9 +24,6 @@
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data android:scheme="samplewebviewapsalar" />
-                <data android:scheme="http"
-                    android:host="qa5.apsalar.com"
-                    android:pathPrefix="/api/v1/appstore/com.apsalar.android.SampleActivity" />
             </intent-filter>
         </activity>
 
