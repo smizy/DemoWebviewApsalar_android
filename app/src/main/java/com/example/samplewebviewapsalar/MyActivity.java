@@ -18,8 +18,6 @@ import android.webkit.WebViewClient;
 import com.apsalar.sdk.Apsalar;
 import com.apsalar.sdk.ApsalarJSInterface;
 
-import jp.gmomars.tracking.sp.android.GMOMarsConnector;
-
 import org.json.*;
 
 import java.net.URLDecoder;
@@ -37,6 +35,8 @@ public class MyActivity extends Activity {
         setContentView(R.layout.activity_my);
 
         Apsalar.startSession(this, "<API_KEY>", "<SECRET>");
+
+        Log.d("Apsalar SDK", "sdkVersion = " + com.apsalar.sdk.Constants.SDK_VER);
 
         mWebView = (WebView) findViewById(R.id.activity_main_webview);
 
